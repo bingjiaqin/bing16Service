@@ -26,6 +26,12 @@ type SslxData struct {
 }
 
 func Add(data string) error {
+	err := git.Update()
+
+	if err != nil {
+		return err
+	}
+
 	var sslxDataPath = viper.GetString("project.component_path") + "/sslx/sslx.js"
 
 	prefix := "export const DATA = "

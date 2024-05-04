@@ -8,6 +8,22 @@ import (
 	"github.com/spf13/viper"
 )
 
+func Update() error {
+	workspace := viper.GetString("project.blog_root")
+	cmd := exec.Command("git", "pull", "origin", "main")
+	cmd.Dir = workspace
+
+	output, err := cmd.CombinedOutput()
+
+	if err != nil {
+		fmt.Println("exec git pull error: ", err)
+		fmt.Println(string(output))
+		return errors.New("exec git pull error")
+	}
+
+	return nil
+}
+
 func CommitAndPush(commitInfo string) error {
 	workspace := viper.GetString("project.blog_root")
 	cmd := exec.Command("git", "add", ".")
