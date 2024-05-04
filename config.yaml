@@ -1,0 +1,14 @@
+app:
+  name: "bing16Service" #姓名
+  mode: "dev" #模式
+  port: 8081 #端口
+log:
+  level: "debug" #日志文件的位置
+  filename: "web_app.log" #文件名字
+  max_size: 200 #在进行切割之前，日志文件的最大大小（以MB为单位）
+  max_age: 30 #保留旧文件的最大天数
+  max_backups: 7 #保留旧文件的最大个数
+project:
+  workspace: /Users/qinbingjia/Code/bing16
+  blog_root: /Users/qinbingjia/Code/bing16/public/article
+  component_path: /Users/qinbingjia/Code/bing16/src/components
