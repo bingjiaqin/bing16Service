@@ -9,6 +9,6 @@ log:
   max_age: 30 #保留旧文件的最大天数
   max_backups: 7 #保留旧文件的最大个数
 project:
-  workspace: ~/bing16
-  blog_root: ~/bing16/public/article
-  component_path: ~/bing16/src/components
+  workspace: /root/bing16
+  blog_root: /root/bing16/public/article
+  component_path: /root/bing16/src/components
