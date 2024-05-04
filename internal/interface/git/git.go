@@ -9,7 +9,7 @@ import (
 )
 
 func Update() error {
-	workspace := viper.GetString("project.blog_root")
+	workspace := viper.GetString("project.workspace")
 	cmd := exec.Command("git", "pull", "origin", "main")
 	cmd.Dir = workspace
 

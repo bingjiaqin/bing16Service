@@ -53,7 +53,7 @@ func SetUp() *gin.Engine {
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"status":  "fail",
-				"message": "Add fail: " + sslxReq.Data,
+				"message": "Add fail: " + err.Error(),
 			})
 			return
 		}
